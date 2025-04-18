@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://i.ibb.co/TLpGwfX/logo-removebg-preview-1.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/TLpGwfX/logo-removebg-preview-1.png" />
+
+<link rel="mask-icon" type="image/x-icon" href="https://i.ibb.co/TLpGwfX/logo-removebg-preview-1.png" color="#111" />
+
+  <title>BOLMEX</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css'>
+  
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+<style>
+
+
+    html { font-size: 15px; }
+    html, body { margin: 0; padding: 0; min-height: 100%; }
+    body { height:100%; display: flex; flex-direction: column; }
+    .referer-warning {
+      background: black;
+      box-shadow: 0 2px 5px rgba(0,0,0, 0.5);
+      padding: 0.75em;
+      color: white;
+      text-align: center;
+      font-family: var(--cp-font-family);
+      line-height: 1.2;
+      font-size: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+    .referer-warning h1 { font-size: 1.2rem; margin: 0; }
+    .referer-warning a { color: #56bcf9; } /* $linkColorOnBlack */
+
+
+    
+    header{
+      padding: 0px auto;
+    }
+
+    #logo-header{
+      float: left;
+      text-decoration: none;
+    }
+
+    #site-name{
+      display: block;
+      float: left;
+    }
+
+    nav{
+      background-color: #9751FF;
+      padding: 1px;
+      padding-left: 100px;
+      height: 50px;
+    }
+
+    nav ul li{
+      display: inline;
+      padding: 15px 20px 18px 10px;
+      border-right: 8px solid #DC143C;
+    }
+
+    nav ul li a{
+      color:  #ffff;
+      text-decoration: none;
+    }
+
+<p>
+</p>
+    footer{
+      position: absolute;
+      bottonm: 0;
+    }
+
+  
+
+body{
+  font-family: 'montserrat', serif;
+  background: #f1f1f1;
+  margin-top: 20px;
+  padding: 0;
+}
+*:focus {
+    outline: none;
+}
+.contenedor{
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+.titulo{
+  border-bottom: 3px solid #9751ff;
+}
+.titulo .shape{
+  background: #9751ff;
+    padding: 10px 20px;
+    max-width: 200px;
+    position: relative;
+}
+.right-skew:before {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -20px;
+  display: block;
+  width: 50px;
+  background: #9751ff;
+/* change background color to same as box   */
+  -webkit-transform: skew(-10deg);
+  -ms-transform: skew(-10deg);
+  transform: skew(20deg);
+}
+
+.titulo .shape h2, .titulo .shape i{
+  display: inline-block;
+  margin: 0;
+  color: #fff;
+}
+.titulo .shape i{
+  margin-right: 10px;
+  font-size: 20px;
+}
+.txt-titulo{
+  position: absolute;
+    right: 110px;
+    top: 15px;
+    font-size: 13px;
+    color: #605f5f;
+    font-weight: 600;
+}
+.producto{
+  max-width: 280px;
+  vertical-align: top;
+  background: #fff;
+  padding: 10px 0 20px 0;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+.producto .contenedor-imagen{
+  min-height: 220px;
+  position: relative;
+}
+.producto .contenedor-imagen img{
+  width: 100%;
+}
+.producto .contenedor-imagen .link{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+}
+.producto .contenedor-imagen .img-hover{
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all ease-in-out 0.2s;
+}
+.producto:hover .img-hover{
+  opacity: 1;
+}
+.producto .datos{
+  border-top: 2px solid #e2e2e2;
+  border-bottom: 2px solid #e2e2e2;
+  padding: 20px;
+}
+.producto .datos h3{
+  margin: 10px 0;
+}
+.producto .datos h3 a{
+  text-decoration: none;
+    color: #2b2b2b;
+    font-size: 14px;
+    display: block;
+    text-transform: uppercase;
+}
+.producto .datos h3 a:hover{
+  text-decoration: underline;
+}
+.producto .datos small a{
+  text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    color: #5a5a5a;
+    font-size: 11px;
+}
+.producto .datos small{
+  font-size: 14px;
+    text-transform: uppercase;
+    color: #5a5a5a;
+}
+.producto .precios{
+  padding: 20px;
+  display: flex
+}
+.producto .precios div{
+  flex-grow: 1;
+}
+.producto .precios div small{
+    display: block;
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: #828282;
+    font-weight: 600;
+}
+.producto .precios div.internet span{
+  font-weight: bold;
+    font-size: 23px;
+    color: #ff0808;
+}
+.producto .precios div span{
+  font-size: 17px;
+    font-weight: 600;
+}
+.producto .btn-carrito{
+  display: block;
+    text-align: center;
+    padding: 15px;
+    background: #9751ff;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 100px;
+    color: #fff;
+    text-decoration: none;
+    display: none;
+    transition: all ease-in-out 0.3s;
+}
+.producto .btn-carrito:hover{
+  transform: scale(1.05);
+}
+.producto:hover .btn-carrito{
+  display: block;
+}
+.starrr {
+  display: block; 
+}
+.starrr a {
+    font-size: 16px;
+    padding: 0 1px;
+    cursor: pointer;
+    color: #FFD119;
+    text-decoration: none; 
+}
+.slider{
+  margin-top: 20px;
+}
+.slick-prev{
+  font-size: 0;
+    position: absolute;
+    right: 55px;
+    top: -64px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+    background-image: url(https://dummyimage.com/20x20/ffffff/474747&text=%3C);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    cursor: pointer;
+}
+.slick-next{
+  font-size: 0;
+    position: absolute;
+    right: 18px;
+    top: -64px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+    background: url(https://dummyimage.com/20x20/ffffff/474747&text=%3E);
+  background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    cursor: pointer;
+}
+.slick-next:hover, .slick-prev:hover{
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 650px){
+  .txt-titulo{
+    display: none;
+  }
+  .titulo .shape h2{
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 600px){
+  .slick-next, .slick-prev{
+    display: none !important;
+  }
+  .titulo .shape{
+    padding: 10px 10px;
+      max-width: 160px;
+    }
+  .producto{
+    max-width: 100%;
+  }
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body class="">
+  
+
+<nav>
+    <ul>
+      <li><a href="inicio.html">INICIO</a></li>
+      <li><a href="VENTAS.html">VENTA DE BOLESTOS</a></li>
+      <li><a href="QS.html">¿QUIENES SOMOS?</a></li>
+
+    </ul>
+  </nav>
+
+
+</body>
+
+<body translate="no" >
+  <html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Carrusel</title>
+  <!-- Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Googlefont -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+  
+  <body>
+  <!-- Insertar Aquí contenido -->
+  <div class="contenedor">
+    <div class="titulo">
+      <div class="shape right-skew">
+        <i class="fas fa-laptop"></i>
+        <h2>EVENTOS</h2>
+      </div>
+      <span class="txt-titulo">Mostrando 4 de 7 elementos</span>
+    </div>
+    <div class="slider carousel">
+
+
+      <div class="producto item">
+        <div class="contenedor-imagen">
+          <a href="cp1.html" class="link"></a>
+          <img src="https://www.sonica.mx/u/fotografias/m/2021/11/15/f608x342-14908_44631_0.jpg"width="10" height="185">
+          <img src="https://as01.epimg.net/mexico/imagenes/2021/11/17/tikitakas/1637176110_909394_1637176196_noticia_normal_recorte1.jpg"width="10" height="185" class="img-hover">
+        </div>        
+        <div class="datos">
+          <div class="starrr"></div>
+          <small><a href="cp1.html">Foro Sol - México, DF</a></small>
+          <h3><a href="cp1.html">Justin Bieber</a></h3>
+          <small>4 EVENTO(S)</small>
+        </div>
+        <div class="precios">
+          <div class="internet">
+            <small>VIP</small>
+            <span>$1,176.00</span>
+          </div>
+          <div>
+            <small>Normal</small>
+            <span>¡Poca disponibilidad!</span>
+          </div>
+        </div>
+        <a href="cp1.html" class="btn-carrito"><i class="fas fa-shopping-basket"></i> Buscar boletos</a>
+      </div>
+
+
+      <div class="producto item">
+        <div class="contenedor-imagen">
+          <a href="cp2.html" class="link"></a>
+          <img src="https://media.ticketmaster.com/tm/en-us/dam/a/986/1efff789-0e44-44d9-976b-13b9ab060986_1540691_CUSTOM.jpg">
+          <img src="https://efekto10.com/wp-content/uploads/2021/07/coldplay.png" class="img-hover">
+        </div>        
+        <div class="datos">
+          <div class="starrr"></div>
+          <small><a href="cp2.html"><p>Foro Sol - México, DF</p><p>Estadio BBVA - Guadalupe, NL</p><p>Estadio Akron - Zapopan, JAL</p></a></small>
+          <h3><a href="cp2.html">Coldplay</a></h3>
+          <small>10 EVENTO(S)</small>
+        </div>
+        <div class="precios">
+          <div class="internet">
+            <small>Mas Barato</small>
+            <span>$750.00</span>
+          </div>
+          <div>
+            <small>Normal</small>
+            <span>$850.00</span>
+          </div>
+        </div>
+        <a href="cp2.html" class="btn-carrito"><i class="fas fa-shopping-basket"></i> Buscar boletos</a>
+      </div>
+
+
+      <div class="producto item">
+        <div class="contenedor-imagen">
+          <a href="cp3.html" class="link"></a>
+          <img src="https://media.ticketmaster.com/tm/en-us/dam/a/e78/9c3a84a2-053b-42cd-a3ae-5e5e30c5de78_1483691_CUSTOM.jpg" width="10" height="185">
+          <img src="https://i.pinimg.com/originals/51/f5/7d/51f57d939d67ad258824079c197939c4.png" height="185" class="img-hover">
+        </div>        
+        <div class="datos">
+          <div class="starrr"></div>
+          <small><a href="cp3.html"><p> Estadio Olímpico Universitario, México, DF </p><p> Estadio Azteca, México, DF </p></a></small>
+          <h3><a href="cp3.html"> Cuartos de Final Liga MX Torneo Grita México A21</a></h3>
+          <small>2 EVENTO(S)</small>
+        </div>
+        <div class="precios">
+          <div class="internet">
+            <small>Mejores lugares</small>
+            <span>$1,100.00</span>
+          </div>
+          <div>
+            <small>Normal</small>
+            <span>$192.00</span>
+          </div>
+        </div>
+        <a href="cp3.html" class="btn-carrito"><i class="fas fa-shopping-basket"></i> Buscar boletos</a>
+      </div>
+
+
+
+      <div class="producto item">
+        <div class="contenedor-imagen">
+          <a href="cp4.html" class="link"></a>
+          <img src="https://media.ticketmaster.com/tm/en-us/dam/a/54a/2210702a-7e6a-4568-9e02-ab04dac2454a_1551561_EVENT_DETAIL_PAGE_16_9.jpg">
+          <img src="https://media.ticketmaster.com/tm/en-us/dam/a/ec9/fd968345-6d4c-454e-9e8f-1ca41276cec9_1561131_CUSTOM.jpg" class="img-hover">
+        </div>        
+        <div class="datos">
+          <div class="starrr"></div>
+          <small><a href="cp4.html">Teatro México - México, DF</a></small>
+          <h3><a href="cp4.html">Sola en la Oscuridad</a></h3>
+          <small>5 EVENTO(S)</small>
+        </div>
+        <div class="precios">
+          <div class="internet">
+            <small>Mejores asientos</small>
+            <span>$812.00</span>
+          </div>
+          <div>
+            <small>Normal</small>
+            <span>$812.00</span>
+          </div>
+        </div>
+        <a href="cp4.html" class="btn-carrito"><i class="fas fa-shopping-basket"></i> Buscar boletos</a>
+      </div>
+
+
+
+      <div class="producto item">
+        <div class="contenedor-imagen">
+          <a href="C19.HTML" class="link"></a>
+          <img src="https://uk.tmconst.com/ccp-salesforce-images/MX/AvisoCOVID2021_368X207.jpg?auto=webp" height="185">
+          <img src="https://uk.tmconst.com/ccp-salesforce-images/MX/AvisoCOVID2021_368X207.jpg?auto=webp" height="185" class="img-hover">
+        </div>        
+        <div class="datos">
+          <div class="starrr"></div>
+          <small><a href="C19.HTML">Consulta nuestro comunicado oficial</a></small>
+          <h3><a href="C19.HTML">Información: COVID-19</a></h3>
+          <small>Eventos pospuestos y cancelados...</small>
+        </div>
+        <div class="precios">
+          <div class="internet">
+            <small>Cancelados</small>
+            <span>...</span>
+          </div>
+          <div>
+            <small>Pospuestos</small>
+            <span>...</span>
+          </div>
+        </div>
+        <a href="C19.HTML" class="btn-carrito"><i class="fas fa-shopping-basket"></i>Mas informacion...</a>
+      </div>
+
+
+      <div class="producto item">
+        <div class="contenedor-imagen">
+          <a href="cp5.html" class="link"></a>
+          <img src="https://media.ticketmaster.com/tm/en-us/dam/a/174/ac4d00ec-c7bf-4d47-97b6-1db794d58174_1480731_CUSTOM.jpg">
+          <img src="https://media.ticketmaster.com/tm/en-us/dbimages/21990v.jpg" height="204" class="img-hover">
+        </div>        
+        <div class="datos">
+          <div class="starrr"></div>
+          <small><a href="cp5.html">Palacio de Bellas Artes - México CDMX, DF</a></small>
+          <h3><a href="cp5.html">Ballet Folklórico de México de Amalia Hernández</a></h3>
+          <small>9 EVENTO(S)</small>
+        </div>
+        <div class="precios">
+          <div class="internet">
+            <small>Mejores asientos</small>
+            <span>$1,416.00 + </span>
+          </div>
+          <div>
+            <small>Normal</small>
+            <span>$336.00</span>
+          </div>
+        </div>
+        <a href="cp5.html" class="btn-carrito"><i class="fas fa-shopping-basket"></i>Buscar eventos</a>
+      </div>
+
+
+
+      <div class="producto item">
+        <div class="contenedor-imagen">
+          <a href="ccf.html" class="link"></a>
+          <img src="https://ocesa-image-optimizer-herokuapp-com.global.ssl.fastly.net/events/FlowFest/squared/1632448043957.jpg?size=360">
+          <img src="https://1.bp.blogspot.com/-jOJ6zLD8MeM/YU4N5GABHbI/AAAAAAAAa5w/DOCGu2kEL90NCjDWt7ce80c5oBovnjXsgCNcBGAsYHQ/s2048/Coca-cola-flow-fest-2021.jpg" height="" class="img-hover">
+        </div>        
+        <div class="datos">
+          <div class="starrr"></div>
+          <small><a href="ccf.html">Autódromo Hermanos Rodríguez - México, DF</a></small>
+          <h3><a href="ccf.html">COCA COLA FLOW FEST</a></h3>
+          <small>4 EVENTO(S)</small>
+        </div>
+        <div class="precios">
+          <div class="internet">
+            <small>Citibanamex</small>
+            <span><p>$3,240.00</p> <p>$4,440.00</p></span>
+          </div>
+          <div>
+            <small>Normal</small>
+            <span><p>$3,240.00</p> <p>$4,440.00</span>
+          </div>
+        </div>
+        <a href="ccf.html" class="btn-carrito"><i class="fas fa-shopping-basket"></i> Buscar eventos</a>
+      </div>
+
+
+    </div>
+  </div>
+  </body>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js'></script>
+<script src='https://rawcdn.githack.com/UnTipografico/Carrusel-eCommerse/3b4b54cdfd58b5c6bfa29a4239e584a268e5403b/js/starrr.js'></script>
+      <script id="rendered-js" >
+//Starrr
+$('.starrr').starrr({});
+
+
+$('.carousel').slick({
+  dots: false,
+  infinite: false,
+  speed: 300,
+  draggable: false,
+  slidesToShow: 4,
+  responsive: [
+  {
+    breakpoint: 1024,
+    settings: {
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      infinite: true,
+      dots: false } },
+
+
+  {
+    breakpoint: 800,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 1 } },
+
+
+  {
+    breakpoint: 600,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1 } }] });
+//# sourceURL=pen.js
+    </script>
+
+  
+
+</body>
+
+</html>
+ 
